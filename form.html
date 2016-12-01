@@ -2,7 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" media="all" href="css/style.css">
 </head>
 <body>
 <div class="nav-dropdown">
@@ -10,8 +12,14 @@
   <ul class="nav-dropdown__list">
     <li class="nav-dropdown__item">
       <a href="#">Главная</a>
+    </li>
+    <li class="nav-dropdown__item">
       <a href="#">фото и видео</a>
+    </li>
+    <li class="nav-dropdown__item">
       <a href="#">Форма отзыва</a>
+    </li>
+    <li class="nav-dropdown__item">
       <a href="#">HTML academy</a>
     </li>
   </ul>
@@ -20,7 +28,7 @@
   <div class="wrap">
     <div class="header__logo">
       <a href="/">
-        <img src="http://placehold.it/102x82">
+        <img src="/img/logo-sedona-mobile.svg">
       </a>
     </div>
     <div class="nav">
@@ -28,19 +36,10 @@
     </div>
   </div>
 </header>
-<div class="header__wrap">
-  <div class="header__logo">
-    <a href="/">
-      <img src="http://placehold.it/102x82">
-    </a>
-  </div>
-  <div class="nav__hamburger"></div>
-</div>
-</header>
 <section class="main-img main-img--inner-page">
   <div class="wrap">
     <div class="main-img__text">
-      <img src="http://placehold.it/230x40">
+      <img src="/img/text-sedona.svg">
     </div>
   </div>
 </section>
@@ -131,8 +130,8 @@
       <div class="form__group">
         <div class="form__group-title">Опишите свои эмоции:</div>
         <textarea cols="40" placeholder="Опишите подробно все свои восторги" class="textarea"></textarea>
+        <input type="submit" value="Отправить отзыв" class="btn">
       </div>
-      <input type="submit" value="Отправить отзыв">
     </form>
   </div>
 </section>
@@ -142,21 +141,21 @@
     <ul class="social">
       <li class="social__item">
         <a href="#">
-          <img src="http://placehold.it/18x14">
+          <img src="/img/icon-twitter.svg">
         </a>
       </li>
       <li class="social__item">
         <a href="#">
-          <img src="http://placehold.it/9x18">
+          <img src="/img/icon-facebook.svg">
         </a>
       </li>
       <li class="social__item">
         <a href="#">
-          <img src="http://placehold.it/20x14">
+          <img src="/img/icon-youtube.svg">
         </a>
       </li>
     </ul>
-    <div class="footer__development"><a href="#">Разработано <img src="http://placehold.it/27x34" alt="Разработано в HTML Academy"></a></div>
+    <div class="footer__development"><a href="#">Разработано <img src="/img/logo-htmlacademy.svg" alt="Разработано в HTML Academy"></a></div>
   </div>
 </footer>
 </body>
