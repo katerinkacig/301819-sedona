@@ -1,13 +1,126 @@
-.photo{
-  margin-bottom:15px;
+.photo {
+  margin-top: 25px;
+  margin-bottom: 33px;
   border-bottom: 1px solid #e5e5e5;
+  @media @tablet-widths {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: none;
+  }
 }
-.photo__item{
-  padding:19px 20px 13px;
-  border-top:1px solid #e5e5e5;
+
+.photo__item {
+  padding: 21px 20px 4px;
+  border-top: 1px solid #e5e5e5;
+  @media @tablet-widths {
+    padding: 0;
+    width: 50%;
+    position: relative;
+    border-top: none;
+  }
+  @media @desktop-widths {
+    width: 33.3%;
+  }
+  .photo__img {
+    @media @tablet-widths {
+      height: 266px;
+    }
+    @media @desktop-widths {
+      height: 270px;
+    }
+  }
+  &--main {
+    @media @tablet-widths {
+      width: 100%;
+    }
+    .photo__img {
+      @media @tablet-widths {
+        height: 398px;
+      }
+    }
+  }
 }
-.photo__img{
-  img{
+
+.photo__img {
+  line-height: 0;
+  font-size: 0;
+  height: 280px;
+  overflow: hidden;
+  img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
+  }
+}
+
+.photo__body {
+  padding: 16px 0 14px;
+  @media @tablet-widths {
+    padding: 12px 17px 13px 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f2f2f2;
+  }
+  @media @desktop-widths {
+    padding: 17px 21px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.photo__title-wrap {
+  margin-bottom: 15px;
+  @media @tablet-widths {
+    margin-bottom: 0;
+  }
+}
+
+.photo__title {
+  line-height: 24px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  @media @desktop-widths {
+    color: #fff;
+  }
+}
+
+.photo__author {
+  line-height: normal;
+  font-size: 14px;
+  color: #333333;
+  @media @desktop-widths {
+    color: #fff;
+  }
+}
+
+.photo__like {
+  a {
+    padding-left: 36px;
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    &:before {
+      content: '';
+      width: 22px;
+      height: 21px;
+      position: absolute;
+      left: 0;
+      top: -4px;
+      background: url("/img/icon-like.svg") no-repeat center;
+      background-size: 100%;
+    }
+    @media @desktop-widths {
+      color: #fff;
+    }
   }
 }
