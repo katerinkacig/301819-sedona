@@ -4,60 +4,62 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" media="all" href="css/reset.css">
   <link rel="stylesheet" media="all" href="css/style.css">
 </head>
 <body>
-<div class="nav-dropdown">
-  <div class="nav-dropdown__close"></div>
-  <ul class="nav-dropdown__list">
-    <li class="nav-dropdown__item">
-      <a href="#">Главная</a>
-    </li>
-    <li class="nav-dropdown__item">
-      <a href="#">фото и видео</a>
-    </li>
-    <li class="nav-dropdown__item">
-      <a href="#">Форма отзыва</a>
-    </li>
-    <li class="nav-dropdown__item">
-      <a href="#">HTML academy</a>
-    </li>
-  </ul>
-</div>
-<header class="header">
-  <div class="wrap">
-    <div class="header__logo">
-      <a href="/">
-        <img src="/img/logo-sedona-mobile.svg">
-      </a>
-    </div>
+<div class="wrapper">
+  <div class="nav-dropdown">
+    <div class="nav-dropdown__close"></div>
+    <ul class="nav-dropdown__list">
+      <li class="nav-dropdown__item">
+        <a href="#">Главная</a>
+      </li>
+      <li class="nav-dropdown__item">
+        <a href="#">фото и видео</a>
+      </li>
+      <li class="nav-dropdown__item">
+        <a href="#">Форма отзыва</a>
+      </li>
+      <li class="nav-dropdown__item">
+        <a href="#">HTML academy</a>
+      </li>
+    </ul>
+  </div>
+  <header class="header">
     <div class="nav">
+      <nav class="nav__list">
+        <a href="#" class="nav__item">Главная</a>
+        <a href="#" class="nav__item">ФОТО И ВИДЕО</a>
+        <div class="header__logo">
+          <a href="/">
+            <img src="/img/logo-sedona-mobile.svg">
+          </a>
+        </div>
+        <a href="#" class="nav__item">Форма отзыва</a>
+        <a href="#" class="nav__item">HTML Academy</a>
+      </nav>
       <div class="nav__hamburger"></div>
     </div>
-  </div>
-</header>
-<section class="main-img">
-  <div class="wrap">
+  </header>
+  <section class="main-img">
     <div class="main-img__text">
       <img src="/img/text-sedona-index.svg" alt="">
     </div>
-  </div>
-</section>
-<section class="intro">
-  <div class="wrap">
+    <div class="main-img__triangle"></div>
+  </section>
+  <section class="intro">
     <div class="intro__body">
       <div class="intro__title">
         Седона — небольшой
-        городок в Аризоне,
+        городок в Аризоне, <br>
         заслуживающий большего!
       </div>
       <div class="intro__text">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</div>
     </div>
-  </div>
-</section>
-<section class="info">
-  <div class="wrap">
-    <div class="info__item info-item info-item--accent">
+  </section>
+  <section class="info">
+    <div class="info__item info-item info__item--full-width info-item--accent">
       <div class="info-item__body">
         <div class="info-item__title">Настоящий городок</div>
         <div class="info-item__num">№1</div>
@@ -66,30 +68,30 @@
       <div class="info-item__img">
         <img src="/img/photo-city@1x.jpg">
       </div>
-      <div class="features">
-        <ul class="features__list">
-          <li class="features__item features__item--house">
-            <div class="features__title">
-              Жилье
-            </div>
-            <div class="features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
-          </li>
-          <li class="features__item features__item--souvenirs">
-            <div class="features__title">
-              Сувениры
-            </div>
-            <div class="features__text">Не только китайского, но и местного производства!</div>
-          </li>
-          <li class="features__item features__item--food">
-            <div class="features__title">
-              Еда
-            </div>
-            <div class="features__text">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</div>
-          </li>
-        </ul>
-      </div>
     </div>
-    <div class="info__item info-item info-item--accent">
+    <div class="features">
+      <ul class="features__list">
+        <li class="features__item features__item--house">
+          <div class="features__title">
+            Жилье
+          </div>
+          <div class="features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
+        </li>
+        <li class="features__item features__item--souvenirs">
+          <div class="features__title">
+            Сувениры
+          </div>
+          <div class="features__text">Не только китайского, но и местного производства!</div>
+        </li>
+        <li class="features__item features__item--food">
+          <div class="features__title">
+            Еда
+          </div>
+          <div class="features__text">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</div>
+        </li>
+      </ul>
+    </div>
+    <div class="info__item info-item info__item--full-width info-item--accent info-item--reverse">
       <div class="info-item__body">
         <div class="info-item__title">Там есть мост дьявола</div>
         <div class="info-item__num">№2</div>
@@ -122,22 +124,20 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="feedback">
-  <div class="wrap">
+  </section>
+  <section class="feedback">
     <div class="feedback__body">
       <div class="feedback__title">Заинтерисовались?</div>
-      <div class="feedback__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</div>
+      <div class="feedback__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+        седоне
+      </div>
       <a href="#" class="btn">Найти гостиницу</a>
     </div>
-  </div>
-</section>
-<section class="map"></section>
-<footer class="footer">
-  <div class="wrap">
+  </section>
+  <section class="map"></section>
+  <footer class="footer">
     <div class="footer__hashtag">#visitSEDONA</div>
-    <ul class="social">
+    <ul class="social__social social">
       <li class="social__item">
         <a href="#">
           <img src="/img/icon-twitter.svg">
@@ -154,8 +154,9 @@
         </a>
       </li>
     </ul>
-    <div class="footer__development"><a href="#">Разработано <img src="/img/logo-htmlacademy.svg" alt="Разработано в HTML Academy"></a></div>
-  </div>
-</footer>
+    <div class="footer__development"><a href="#">Разработано <img src="/img/logo-htmlacademy.svg"
+                                                                  alt="Разработано в HTML Academy"></a></div>
+  </footer>
+</div>
 </body>
 </html>

@@ -1,18 +1,31 @@
-.nav{
-
+.nav {
 }
-.nav__hamburger{
+
+.nav__list {
+  height: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav__item {
+  display: none;
+  @media @tablet-widths {
+    display: block;
+  }
+}
+
+.nav__hamburger {
   position: absolute;
-  right:20px;
-  top:50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  right: 20px;
+  top: 50%;
   transform: translateY(-50%);
   width: 23px;
-  height:22px;
+  height: 22px;
   position: absolute;
   background: url("/img/icon-menu.svg") no-repeat center;
   background-size: 100%;
+  @media @tablet-widths {
+    display: none;
+  }
 }

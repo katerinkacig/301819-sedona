@@ -4,62 +4,70 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" media="all" href="css/reset.css">
   <link rel="stylesheet" media="all" href="css/style.css">
 </head>
 <body>
-<div class="nav-dropdown">
-  <div class="nav-dropdown__close"></div>
-  <ul class="nav-dropdown__list">
-    <li class="nav-dropdown__item">
-      <a href="#">Главная</a>
-    </li>
-    <li class="nav-dropdown__item">
-      <a href="#">фото и видео</a>
-    </li>
-    <li class="nav-dropdown__item">
-      <a href="#">Форма отзыва</a>
-    </li>
-    <li class="nav-dropdown__item">
-      <a href="#">HTML academy</a>
-    </li>
-  </ul>
-</div>
-<header class="header">
-  <div class="wrap">
-    <div class="header__logo">
-      <a href="/">
-        <img src="/img/logo-sedona-mobile.svg">
-      </a>
-    </div>
+<div class="wrapper">
+  <div class="nav-dropdown">
+    <div class="nav-dropdown__close"></div>
+    <ul class="nav-dropdown__list">
+      <li class="nav-dropdown__item">
+        <a href="#">Главная</a>
+      </li>
+      <li class="nav-dropdown__item">
+        <a href="#">фото и видео</a>
+      </li>
+      <li class="nav-dropdown__item">
+        <a href="#">Форма отзыва</a>
+      </li>
+      <li class="nav-dropdown__item">
+        <a href="#">HTML academy</a>
+      </li>
+    </ul>
+  </div>
+  <header class="header">
     <div class="nav">
+      <nav class="nav__list">
+        <a href="#" class="nav__item">Главная</a>
+        <a href="#" class="nav__item">ФОТО И ВИДЕО</a>
+        <div class="header__logo">
+          <a href="/">
+            <img src="/img/logo-sedona-mobile.svg">
+          </a>
+        </div>
+        <a href="#" class="nav__item">Форма отзыва</a>
+        <a href="#" class="nav__item">HTML Academy</a>
+      </nav>
       <div class="nav__hamburger"></div>
     </div>
-  </div>
-</header>
-<section class="main-img main-img--inner-page">
-  <div class="wrap">
-    <div class="main-img__text">
-      <img src="/img/text-sedona.svg">
+  </header>
+  <section class="main-img main-img--inner-page">
+    <div class="wrap">
+      <div class="main-img__text">
+        <img src="/img/text-sedona.svg">
+      </div>
+      <div class="main-img__triangle"></div>
     </div>
-  </div>
-</section>
-<section class="middle">
-  <div class="wrap">
-    <h1 class="h1">Фото и видео</h1>
+  </section>
+  <section class="middle">
+    <h1 class="middle__h1">Фото и видео</h1>
     <p class="middle__text">
       Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
     </p>
     <div class="photo">
-      <div class="photo__item">
+      <div class="photo__item photo__item--main">
         <div class="photo__img">
           <a href="#">
             <img src="/img/photo-1-mobile@1x.jpg">
           </a>
         </div>
         <div class="photo__body">
-          <div class="photo__title">неродные просторы</div>
-          <div class="photo__author">Автор фото: Борис</div>
-          <div class="like">
+          <div class="photo__title-wrap">
+            <div class="photo__title">неродные просторы</div>
+            <div class="photo__author">Автор фото: Борис</div>
+          </div>
+          <div class="photo__like">
             <a href="#">1350</a>
           </div>
         </div>
@@ -71,9 +79,11 @@
           </a>
         </div>
         <div class="photo__body">
-          <div class="photo__title">Местная растительность</div>
-          <div class="photo__author">Автор фото: Сергей</div>
-          <div class="like">
+          <div class="photo__title-wrap">
+            <div class="photo__title">Местная растительность</div>
+            <div class="photo__author">Автор фото: Сергей</div>
+          </div>
+          <div class="photo__like">
             <a href="#">143</a>
           </div>
         </div>
@@ -85,9 +95,11 @@
           </a>
         </div>
         <div class="photo__body">
-          <div class="photo__title">Автор фото: Сергей</div>
-          <div class="photo__author">Автор фото: Петр</div>
-          <div class="like">
+          <div class="photo__title-wrap">
+            <div class="photo__title">Автор фото: Сергей</div>
+            <div class="photo__author">Автор фото: Петр</div>
+          </div>
+          <div class="photo__like">
             <a href="#">96</a>
           </div>
         </div>
@@ -99,34 +111,41 @@
           </a>
         </div>
         <div class="photo__body">
-          <div class="photo__title">Мост дьявола</div>
-          <div class="photo__author">Автор фото: Антон</div>
-          <div class="like">
+          <div class="photo__title-wrap">
+            <div class="photo__title">Мост дьявола
+            </div>
+            <div class="photo__author">Автор фото: Антон</div>
+          </div>
+          <div class="photo__like">
             <a href="#">96</a>
           </div>
         </div>
       </div>
     </div>
-    <h1 class="h1">Все еще сомневаетесь?</h1>
+    <h2 class="middle__h2">Все еще сомневаетесь?</h2>
     <p class="middle__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
     <div class="video">
       <div class="video__item">
-        <video preload="metadata" width="320" height="199" poster="/img/video-mobile@1x.jpg">
-        </video>
+        <div class="video__video">
+          <video preload="metadata" width="100%" height="100%" poster="/img/video-desktop@1x.jpg">
+          </video>
+        </div>
         <div class="video__controls">
-          <div class="video__progress-bar"></div>
+          <div class="video__progress-bar-wrap">
+            <div class="video__progress-bar">
+              <div class="video__progress-bar-slider"></div>
+            </div>
+          </div>
           <a href="#" class="video__restart"></a>
           <a href="#" class="video__captions"></a>
           <a href="#" class="video__fullscreen"></a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<footer class="footer">
-  <div class="wrap">
+  </section>
+  <footer class="footer">
     <div class="footer__hashtag">#visitSEDONA</div>
-    <ul class="social">
+    <ul class="social__social social">
       <li class="social__item">
         <a href="#">
           <img src="/img/icon-twitter.svg">
@@ -143,8 +162,10 @@
         </a>
       </li>
     </ul>
-    <div class="footer__development"><a href="#">Разработано <img src="/img/logo-htmlacademy.svg" alt="Разработано в HTML Academy"></a></div>
-  </div>
-</footer>
+    <div class="footer__development"><a href="#">Разработано <img src="/img/logo-htmlacademy.svg"
+                                                                  alt="Разработано в HTML Academy"></a></div>
+  </footer>
+</div>
 </body>
+</html>
 </html>
