@@ -3,9 +3,14 @@
   margin-bottom: 33px;
   border-bottom: 1px solid #e5e5e5;
   @media @tablet-widths {
+    margin-top: 65px;
+    margin-bottom: 57px;
     display: flex;
     flex-wrap: wrap;
     border-bottom: none;
+  }
+  @media @desktop-widths {
+    margin: 70px -120px 57px;
   }
 }
 
@@ -22,21 +27,10 @@
     width: 33.3%;
   }
   .photo__img {
-    @media @tablet-widths {
-      height: 266px;
-    }
-    @media @desktop-widths {
-      height: 270px;
-    }
   }
   &--main {
     @media @tablet-widths {
       width: 100%;
-    }
-    .photo__img {
-      @media @tablet-widths {
-        height: 398px;
-      }
     }
   }
 }
@@ -46,6 +40,17 @@
   font-size: 0;
   height: 280px;
   overflow: hidden;
+  @media @tablet-widths {
+    height: 266px;
+  }
+  @media @desktop-widths {
+    height: 270px;
+  }
+  .photo__item--main & {
+    @media @tablet-widths {
+      height: 398px;
+    }
+  }
   img {
     position: relative;
     top: 50%;
@@ -57,14 +62,14 @@
 .photo__body {
   padding: 16px 0 14px;
   @media @tablet-widths {
-    padding: 12px 17px 13px 17px;
+    padding: 18px 19px 20px 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #f2f2f2;
   }
   @media @desktop-widths {
-    padding: 17px 21px 15px;
+    padding: 17px 21px 19px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -87,6 +92,9 @@
   font-size: 14px;
   font-weight: bold;
   color: #000000;
+  @media @tablet-widths {
+    margin-bottom: 2px;
+  }
   @media @desktop-widths {
     color: #fff;
   }
@@ -118,6 +126,9 @@
       top: -4px;
       background: url("/img/icon-like.svg") no-repeat center;
       background-size: 100%;
+    }
+    @media @tablet-widths {
+      padding-left: 31px;
     }
     @media @desktop-widths {
       color: #fff;
