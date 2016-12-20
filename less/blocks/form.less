@@ -251,13 +251,7 @@
       min-width: 316px;
     }
   }
-  .form__field-tel & {
-    padding-right: 60px;
-    &:focus {
-      padding-right: 56px;
-    }
-  }
-  .form__field-mail & {
+  .form__field-ico & {
     padding-right: 60px;
     &:focus {
       padding-right: 56px;
@@ -265,7 +259,7 @@
   }
 }
 
-.form__field-tel {
+.form__field-ico{
   position: relative;
   &:after {
     content: '';
@@ -274,20 +268,16 @@
     top: 0;
     width: 57px;
     height: 100%;
-    background: #e6e6e6 url(/img/icon-phone.svg) no-repeat center;
   }
-}
-
-.form__field-mail {
-  position: relative;
-  &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 57px;
-    height: 100%;
-    background: #e6e6e6 url(/img/icon-mail.svg) no-repeat center;
+  &--tel {
+    &:after {
+      background: #e6e6e6 url(/img/icon-phone.svg) no-repeat center;
+    }
+  }
+  &--mail {
+     &:after {
+       background: #e6e6e6 url(/img/icon-mail.svg) no-repeat center;
+     }
   }
 }
 
