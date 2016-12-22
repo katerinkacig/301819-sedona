@@ -23,8 +23,11 @@
       display: none;
     }
   }
-  .nav--no-js &{
+  .nav--no-js & {
     display: block;
+    @media @tablet-widths {
+      display: flex;
+    }
   }
 }
 
@@ -128,7 +131,7 @@
   @media @tablet-widths {
     display: none;
   }
-  .nav--no-js &{
+  .nav--no-js & {
     display: none;
   }
 }
@@ -146,7 +149,7 @@
   @media @tablet-widths {
     display: none;
   }
-  .nav--no-js &{
+  .nav--no-js & {
     display: none;
   }
 }

@@ -5,8 +5,8 @@
   box-sizing: border-box;
   position: relative;
   background-image: url("/img/bg-back-mobile@1x.jpg");
-  background-repeat:  no-repeat;
-  background-position: center top;
+  background-repeat: no-repeat;
+  background-position: center bottom;
   background-size: cover;
   overflow: hidden;
   @media (min-resolution: 1.5dppx) {
@@ -47,11 +47,15 @@
 .main-img__text {
   padding: 84px 20px 84px;
   margin: 0 auto;
-  max-width: 460px;
+  max-width: 461px;
   box-sizing: border-box;
   text-align: center;
   @media @tablet-widths {
     padding: 79px 20px 86px;
+    max-width: 497px;
+  }
+  @media @desktop-widths {
+    max-width: 490px;
   }
   &:before {
     content: '';

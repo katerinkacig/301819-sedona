@@ -24,12 +24,15 @@
     border-top: none;
   }
   @media @desktop-widths {
-    width: 33.3%;
+    width: 33.33%;
   }
   .photo__img {
   }
   &--main {
     @media @tablet-widths {
+      width: 100%;
+    }
+    @media @desktop-widths {
       width: 100%;
     }
   }
@@ -42,9 +45,6 @@
   overflow: hidden;
   @media @tablet-widths {
     height: 266px;
-  }
-  @media @desktop-widths {
-    height: 270px;
   }
   .photo__item--main & {
     @media @tablet-widths {
@@ -123,19 +123,23 @@
 .photo__like-ico {
   margin-right: 9px;
   width: 22px;
+  height: 20px;
   display: inline-block;
   vertical-align: middle;
   @media @tablet-widths {
     margin-right: 5px;
   }
-  svg{
+  svg {
+    width: 100%;
+    height: 100%;
     fill: #b2b2b2;
     @media @desktop-widths {
       fill: #fff;
     }
   }
 }
-.photo__like-num{
+
+.photo__like-num {
   display: inline-block;
   vertical-align: middle;
   font-size: 14px;
