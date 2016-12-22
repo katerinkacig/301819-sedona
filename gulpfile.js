@@ -12,6 +12,7 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
+var run = require("run-sequence");
 var del = require("del");
 
 gulp.task("style", function() {
@@ -26,16 +27,15 @@ gulp.task("style", function() {
         sort: true
       })
     ]))
-    .pipe(gulp.dest("css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("css"))
-    .pipe(server.stream());
+    .pipe(gulp.dest("build/css"));
 });
 
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", function() {
   server.init({
-    server: ".",
+    server: "build",
     notify: false,
     open: true,
     cors: true,
@@ -52,7 +52,7 @@ gulp.task("images", function() {
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true})
     ]))
-    .pipe(gulp.dest("img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("symbols", function() {
@@ -62,7 +62,7 @@ gulp.task("symbols", function() {
       inlineSvg: true
     }))
     .pipe(rename("symbols.svg"))
-    .pipe(gulp.dest("img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("clean", function() {
@@ -74,6 +74,7 @@ gulp.task("copy", function() {
     "fonts/**/*.{woff,woff2}",
     "img/**",
     "js/**",
+    "css/reset.css",
     "*.html"
   ], {
     base: "."
