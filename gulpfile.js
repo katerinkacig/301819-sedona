@@ -14,6 +14,8 @@ var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
 var del = require("del");
+var concat = require('gulp-concat');
+var addsrc = require('gulp-add-src');
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -27,6 +29,8 @@ gulp.task("style", function() {
         sort: true
       })
     ]))
+    .pipe(addsrc('css/reset.css'))
+    .pipe(concat('style.css'))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
@@ -74,7 +78,6 @@ gulp.task("copy", function() {
     "fonts/**/*.{woff,woff2}",
     "img/**",
     "js/**",
-    "css/reset.css",
     "*.html"
   ], {
     base: "."
