@@ -110,28 +110,34 @@
 }
 
 .photo__like {
-  a {
-    padding-left: 36px;
-    position: relative;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    color: #000000;
-    &:before {
-      content: '';
-      width: 22px;
-      height: 21px;
-      position: absolute;
-      left: 0;
-      top: -4px;
-      background: url("/img/icon-like.svg") no-repeat center;
-      background-size: 100%;
-    }
-    @media @tablet-widths {
-      padding-left: 31px;
-    }
+  text-decoration: none;
+  color: #000;
+  @media @tablet-widths {
+    padding-left: 31px;
+  }
+  @media @desktop-widths {
+    color: #fff;
+  }
+}
+
+.photo__like-ico {
+  margin-right: 9px;
+  width: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  @media @tablet-widths {
+    margin-right: 5px;
+  }
+  svg{
+    fill: #b2b2b2;
     @media @desktop-widths {
-      color: #fff;
+      fill: #fff;
     }
   }
+}
+.photo__like-num{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
 }

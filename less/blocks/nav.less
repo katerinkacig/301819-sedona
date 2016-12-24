@@ -4,6 +4,7 @@
 
 .nav__list {
   position: relative;
+  display: none;
   @media @tablet-widths {
     height: 56px;
     display: flex;
@@ -18,6 +19,12 @@
     left: 0;
     bottom: 0;
     background: url("/img/nav-shadow.png") repeat-x bottom;
+    @media @tablet-widths {
+      display: none;
+    }
+  }
+  .nav--no-js &{
+    display: block;
   }
 }
 
@@ -117,7 +124,11 @@
   position: absolute;
   background: url("/img/icon-menu.svg") no-repeat center;
   background-size: 100%;
+  cursor: pointer;
   @media @tablet-widths {
+    display: none;
+  }
+  .nav--no-js &{
     display: none;
   }
 }
@@ -131,7 +142,11 @@
   background: url("/img/icon-cross.svg") no-repeat center;
   background-size: 23px;
   z-index: 1;
+  cursor: pointer;
   @media @tablet-widths {
+    display: none;
+  }
+  .nav--no-js &{
     display: none;
   }
 }
