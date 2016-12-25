@@ -1,15 +1,14 @@
 .main-img {
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
+  background-color: #e4f1fa;
   background-image: url("/img/bg-back-mobile@1x.jpg");
-  background-repeat:  no-repeat;
-  background-position: center top;
+  background-repeat: no-repeat;
+  background-position: center bottom;
   background-size: cover;
   overflow: hidden;
-  @media (min-resolution: 1.5dppx) {
+  @media (max-width: 767px) and (min-resolution: 1.5dppx) {
     background-image: url("/img/bg-back-mobile@2x.jpg");
   }
   @media @tablet-widths {
@@ -47,11 +46,15 @@
 .main-img__text {
   padding: 84px 20px 84px;
   margin: 0 auto;
-  max-width: 460px;
+  max-width: 461px;
   box-sizing: border-box;
   text-align: center;
   @media @tablet-widths {
     padding: 79px 20px 86px;
+    max-width: 497px;
+  }
+  @media @desktop-widths {
+    max-width: 490px;
   }
   &:before {
     content: '';
@@ -85,5 +88,7 @@
   }
   img {
     max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 }

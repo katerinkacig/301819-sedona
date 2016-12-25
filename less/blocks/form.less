@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: flex-start;
   }
   @media @desktop-widths {
     margin-top: 54px;
@@ -35,7 +36,7 @@
   &--right {
     @media @tablet-widths {
       padding-left: 57px;
-      align-self: flex-end;
+      align-self: flex-start;
     }
     @media @desktop-widths {
       padding-left: 80px;
@@ -174,7 +175,6 @@
     }
     @media @desktop-widths {
       padding: 0;
-      margin-bottom: 0;
       width: auto;
     }
     &:nth-child(1) {
@@ -221,6 +221,7 @@
   height: 60px;
   width: 100%;
   box-sizing: border-box;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
@@ -288,6 +289,7 @@
   box-sizing: border-box;
   line-height: 26px;
   font-size: 18px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   color: #000000;
   background: #f2f2f2;
@@ -335,6 +337,8 @@
     position: relative;
     left: auto;
     bottom: auto;
+    max-width: 320px;
+    box-sizing: border-box;
   }
 }
 
@@ -460,7 +464,7 @@
     flex-wrap: wrap;
   }
   @media @desktop-widths {
-    margin: 0 0 10px;
+    margin: 0 0 -20px;
     padding-top: 0;
     justify-content: space-between;
   }
