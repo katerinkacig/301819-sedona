@@ -1,15 +1,14 @@
 .main-img {
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
+  background-color: #e4f1fa;
   background-image: url("/img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
   overflow: hidden;
-  @media (min-resolution: 1.5dppx) {
+  @media (max-width: 767px) and (min-resolution: 1.5dppx) {
     background-image: url("/img/bg-back-mobile@2x.jpg");
   }
   @media @tablet-widths {
@@ -89,5 +88,7 @@
   }
   img {
     max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 }

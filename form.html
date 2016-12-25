@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" media="all" href="css/reset.css">
-  <link rel="stylesheet" media="all" href="css/style.css">
+  <link rel="stylesheet" media="all" href="css/style.min.css">
 </head>
 <body>
 <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
@@ -57,14 +56,14 @@
         <picture>
           <source srcset="/img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
           <source srcset="/img/logo-sedona-tablet.svg" media="(min-width: 768px)">
-          <img src="/img/logo-sedona-mobile.svg">
+          <img src="/img/logo-sedona-mobile.svg" alt="" width="102" height="84">
         </picture>
       </a>
     </div>
   </header>
   <section class="main-img main-img--inner-page">
     <div class="main-img__text">
-      <img src="/img/text-sedona.svg">
+      <img src="/img/text-sedona.svg" alt="">
     </div>
   </section>
   <section class="middle">
@@ -72,38 +71,38 @@
     <p class="middle__text">
       Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
     </p>
-    <form action="" class="form">
+    <form action="sedona_form" class="form">
       <div class="form__group form__group--col-2 form__group--right">
         <div class="form__group-title">Представьтесь:</div>
         <div class="form__line form__line--inline">
-          <label class="form__label">Имя*:</label>
-          <div class="form__field-wrap"><input type="text" required value="Петр" class="form__field"></div>
+          <label class="form__label" for="name">Имя*:</label>
+          <div class="form__field-wrap"><input type="text" id="name" required value="Петр" class="form__field"></div>
         </div>
         <div class="form__line  form__line--inline">
-          <label class="form__label">Фамилия*:</label>
-          <div class="form__field-wrap"><input type="text" required value="Иванов" class="form__field"></div>
+          <label class="form__label" for="surname">Фамилия*:</label>
+          <div class="form__field-wrap"><input type="text" id="surname" required value="Иванов" class="form__field"></div>
         </div>
         <div class="form__line form__line--inline">
-          <label class="form__label">Отчество:</label>
-          <div class="form__field-wrap"><input type="text" value="Александрович" class="form__field"></div>
+          <label class="form__label" for="patronymic">Отчество:</label>
+          <div class="form__field-wrap"><input type="text" id="patronymic" value="Александрович" class="form__field"></div>
         </div>
       </div>
       <div class="form__group form__group--col-1">
         <div class="form__group-title">Контактная информация:</div>
         <div class="form__group-desktop-inline">
           <div class="form__line">
-            <label class="form__label"><span class="desktop-hide">Контактный </span>телефон*:</label>
+            <label class="form__label" for="tel"><span class="desktop-hide">Контактный </span>телефон*:</label>
             <div class="form__field-wrap">
-              <div class="form__field-ico form__field-ico--tel"><input type="text" required
+              <div class="form__field-ico form__field-ico--tel"><input type="text" id="tel" required
                                                                        placeholder="Введите телефон"
                                                                        class="form__field"></div>
               <div class="form__error-text">Ошибка, перепроверьте номер</div>
             </div>
           </div>
           <div class="form__line">
-            <label class="form__label">Электронная почта*:</label>
+            <label class="form__label" for="email">Электронная почта*:</label>
             <div class="form__field-wrap">
-              <div class="form__field-ico form__field-ico--mail"><input type="text" required
+              <div class="form__field-ico form__field-ico--mail"><input type="email" id="email" required
                                                                         placeholder="Введите e-mail"
                                                                         class="form__field"></div>
             </div>
@@ -113,20 +112,20 @@
       <div class="form__group form__group--col-2 form__group--left form__group--order-1 form__group--radio">
         <div class="form__group-title">Ваше общее впечатление:</div>
         <div class="form__line">
-          <label class="form__radio">
-            <input type="radio" checked name="effect">
+          <label class="form__radio" for="seems_positive">
+            <input type="radio" id="seems_positive" checked name="effect">
             <span class="form__radio-label">Скорее положительное</span>
           </label>
         </div>
         <div class="form__line">
-          <label class="form__radio">
-            <input type="radio" name="effect">
+          <label class="form__radio" for="negative_impression">
+            <input type="radio" id="negative_impression" name="effect">
             <span class="form__radio-label">Скорее отрицательное</span>
           </label>
         </div>
         <div class="form__line">
-          <label class="form__radio">
-            <input type="radio" name="effect">
+          <label class="form__radio" for="impression_not_know">
+            <input type="radio" id="impression_not_know" name="effect">
             <span class="form__radio-label">Затрудняюсь ответить</span>
           </label>
         </div>
@@ -137,26 +136,26 @@
         </div>
         <div class="form__group-checkbox">
           <div class="form__line">
-            <label class="form__checkbox">
-              <input type="checkbox" checked>
+            <label class="form__checkbox" for="devil_bridge">
+              <input type="checkbox" id="devil_bridge" checked>
               <span class="form__checkbox-label">Мост Дьявола</span>
             </label>
           </div>
           <div class="form__line">
-            <label class="form__checkbox">
-              <input type="checkbox" checked>
+            <label class="form__checkbox" for="slide_park">
+              <input type="checkbox" id="slide_park" checked>
               <span class="form__checkbox-label">Слайд-парк</span>
             </label>
           </div>
           <div class="form__line">
-            <label class="form__checkbox">
-              <input type="checkbox">
+            <label class="form__checkbox" for="mountain-bell">
+              <input type="checkbox" id="mountain-bell">
               <span class="form__checkbox-label">Гора-Колокол</span>
             </label>
           </div>
           <div class="form__line">
-            <label class="form__checkbox">
-              <input type="checkbox" checked>
+            <label class="form__checkbox" for="red_rocks">
+              <input type="checkbox" id="red_rocks" checked>
               <span class="form__checkbox-label">Красные скалы</span>
             </label>
           </div>
@@ -203,21 +202,21 @@
     <ul class="footer__social social">
       <li class="social__item">
         <a class="social__link" href="#">
-          <svg width="17.5px" height="14.663px">
+          <svg width="17.5" height="14.663">
             <use xlink:href="#icon-twitter"></use>
           </svg>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link" href="#">
-          <svg width="8.672px" height="18.944px">
+          <svg width="8.672" height="18.944">
             <use xlink:href="#icon-facebook"></use>
           </svg>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link" href="#">
-          <svg width="19.979px" height="14.015px">
+          <svg width="19.979" height="14.015">
             <use xlink:href="#icon-youtube"></use>
           </svg>
         </a>
@@ -226,7 +225,7 @@
     <div class="footer__development">
       <a class="footer__development-link" href="#" title="Разработано в HTML Academy">
         Разработано
-        <svg class="footer__development-img">
+        <svg class="footer__development-img" width="27" height="34">
           <use xlink:href="#logo-htmlacademy"></use>
         </svg>
       </a>

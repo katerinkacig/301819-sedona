@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" media="all" href="css/reset.css">
-  <link rel="stylesheet" media="all" href="css/style.css">
+  <link rel="stylesheet" media="all" href="css/style.min.css">
 </head>
 <body>
 <div class="wrapper">
@@ -58,14 +57,14 @@
         <picture>
           <source srcset="/img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
           <source srcset="/img/logo-sedona-tablet.svg" media="(min-width: 768px)">
-          <img src="/img/logo-sedona-mobile.svg">
+          <img src="/img/logo-sedona-mobile.svg" alt="" width="102" height="84">
         </picture>
       </a>
     </div>
   </header>
   <section class="main-img main-img--inner-page">
     <div class="main-img__text">
-      <img src="/img/text-sedona.svg">
+      <img src="/img/text-sedona.svg" alt="" width="190" height="33">
     </div>
   </section>
   <section class="middle">
@@ -82,7 +81,7 @@
                       media="(min-width: 1200px)">
               <source srcset="/img/photo-1-tablet@1x.jpg 1x, /img/photo-1-tablet@2x.jpg 2x" media="(min-width: 768px)">
               <source srcset="/img/photo-1-mobile@2x.jpg 2x" media="(max-width: 767px)">
-              <img src="/img/photo-1-mobile@1x.jpg">
+              <img src="/img/photo-1-mobile@1x.jpg" alt="" width="280" height="280">
             </picture>
           </a>
         </div>
@@ -93,7 +92,7 @@
           </div>
           <a class="photo__like" href="#">
               <span class="photo__like-ico">
-                <svg>
+                <svg width="22" height="20">
                   <use xlink:href="#icon-like"></use>
                 </svg>
               </span>
@@ -109,7 +108,7 @@
                       media="(min-width: 1200px)">
               <source srcset="/img/photo-2-tablet@1x.jpg 1x, /img/photo-2-tablet@2x.jpg 2x" media="(min-width: 768px)">
               <source srcset="/img/photo-2-mobile@2x.jpg 2x" media="(max-width: 767px)">
-              <img src="/img/photo-2-mobile@1x.jpg">
+              <img src="/img/photo-2-mobile@1x.jpg" alt="" width="280" height="280">
             </picture>
           </a>
         </div>
@@ -120,7 +119,7 @@
           </div>
           <a class="photo__like" href="#">
               <span class="photo__like-ico">
-                <svg>
+                <svg width="22" height="20">
                   <use xlink:href="#icon-like"></use>
                 </svg>
               </span>
@@ -137,7 +136,7 @@
               <source srcset="" media="(min-width: 1200px)">
               <source srcset="/img/photo-3-tablet@1x.jpg 1x, /img/photo-3-tablet@2x.jpg 2x" media="(min-width: 768px)">
               <source srcset="/img/photo-3-mobile@2x.jpg 2x" media="(max-width: 767px)">
-              <img src="/img/photo-3-mobile@1x.jpg">
+              <img src="/img/photo-3-mobile@1x.jpg" alt="" width="280" height="280">
             </picture>
           </a>
         </div>
@@ -148,7 +147,7 @@
           </div>
           <a class="photo__like" href="#">
               <span class="photo__like-ico">
-                <svg>
+                <svg width="22" height="20">
                   <use xlink:href="#icon-like"></use>
                 </svg>
               </span>
@@ -164,7 +163,7 @@
                       media="(min-width: 1200px)">
               <source srcset="/img/photo-4-tablet@1x.jpg 1x, /img/photo-4-tablet@2x.jpg 2x" media="(min-width: 768px)">
               <source srcset="/img/photo-4-mobile@2x.jpg 2x" media="(max-width: 767px)">
-              <img src="/img/photo-4-mobile@1x.jpg">
+              <img src="/img/photo-4-mobile@1x.jpg" alt="" width="280" height="280">
             </picture>
           </a>
         </div>
@@ -176,7 +175,7 @@
           </div>
           <a class="photo__like" href="#">
               <span class="photo__like-ico">
-                <svg>
+                <svg width="22" height="20">
                   <use xlink:href="#icon-like"></use>
                 </svg>
               </span>
@@ -189,15 +188,19 @@
     <p class="middle__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
     <div class="video">
       <div class="video__video">
-        <video preload="metadata" width="100%" height="100%">
-        </video>
+        <!--Видео должно выглядить так, но закомментированно из-за того, что нет исходников-->
+        <!--video preload="metadata">
+          <source src="video.mp4" type="video/mp4">
+          <source src="video.webm" type="video/webm">
+          <source src="video.ogv" type="video/ogg">
+        </video-->
       </div>
       <div class="video__poster">
         <picture>
           <source srcset="/img/video-desktop@1x.jpg 1x, /img/video-desktop@2x.jpg 2x" media="(min-width: 1200px)">
           <source srcset="/img/video-tablet@1x.jpg 1x, /img/video-tablet@2x.jpg 2x" media="(min-width: 768px)">
           <source srcset="/img/video-mobile@2x.jpg 2x" media="(max-width: 767px)">
-          <img src="/img/video-mobile@1x.jpg">
+          <img src="/img/video-mobile@1x.jpg" alt="" width="320" height="201">
         </picture>
       </div>
       <div class="video__controls">
@@ -207,17 +210,17 @@
           </div>
         </div>
         <a href="#" class="video__controls-item video__controls-item--restart">
-          <svg>
+          <svg width="16" height="20">
             <use xlink:href="#icon-video-replay"></use>
           </svg>
         </a>
         <a href="#" class="video__controls-item video__controls-item--captions">
-          <svg>
+          <svg width="32" height="20">
             <use xlink:href="#icon-video-subtitles"></use>
           </svg>
         </a>
         <a href="#" class="video__controls-item video__controls-item--fullscreen">
-          <svg>
+          <svg width="20" height="20">
             <use xlink:href="#icon-video-fullscreen"></use>
           </svg>
         </a>
@@ -229,21 +232,21 @@
     <ul class="footer__social social">
       <li class="social__item">
         <a class="social__link" href="#">
-          <svg width="17.5px" height="14.663px">
+          <svg width="17.5" height="14.663">
             <use xlink:href="#icon-twitter"></use>
           </svg>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link" href="#">
-          <svg width="8.672px" height="18.944px">
+          <svg width="8.672" height="18.944">
             <use xlink:href="#icon-facebook"></use>
           </svg>
         </a>
       </li>
       <li class="social__item">
         <a class="social__link" href="#">
-          <svg width="19.979px" height="14.015px">
+          <svg width="19.979" height="14.015">
             <use xlink:href="#icon-youtube"></use>
           </svg>
         </a>
@@ -252,7 +255,7 @@
     <div class="footer__development">
       <a class="footer__development-link" href="#" title="Разработано в HTML Academy">
         Разработано
-        <svg class="footer__development-img">
+        <svg class="footer__development-img" width="27" height="34">
           <use xlink:href="#logo-htmlacademy"></use>
         </svg>
       </a>
@@ -262,5 +265,4 @@
 <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="/js/app.js"></script>
 </body>
-</html>
 </html>
