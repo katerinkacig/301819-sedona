@@ -170,6 +170,7 @@
       margin-bottom: 31px;
       padding: 0 28px;
       display: inline-block;
+      vertical-align: middle;
       width: 50%;
       box-sizing: border-box;
     }
@@ -272,12 +273,12 @@
   }
   &--tel {
     &:after {
-      background: #e6e6e6 url(/img/icon-phone.svg) no-repeat center;
+      background: #e6e6e6 url(../img/icon-phone.svg) no-repeat center;
     }
   }
   &--mail {
      &:after {
-       background: #e6e6e6 url(/img/icon-mail.svg) no-repeat center;
+       background: #e6e6e6 url(../img/icon-mail.svg) no-repeat center;
      }
   }
 }
@@ -305,6 +306,14 @@
   }
   &:-ms-input-placeholder {
     color: #000;
+  }
+  &:hover {
+    background: #e5e5e5;
+  }
+  &:focus {
+    padding: 16px;
+    background: #ffffff;
+    border: 4px solid #e5e5e5;
   }
 }
 
