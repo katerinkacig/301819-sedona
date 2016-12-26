@@ -18,9 +18,28 @@
     padding-top: 48px;
     max-width: 637px;
   }
+  .btn {
+    @media @tablet-widths {
+      margin: 0 auto;
+      max-width: 456px;
+    }
+    @media @desktop-widths {
+      max-width: 458px;
+    }
+  }
   &--error {
     @media @tablet-widths {
       max-width: 400px;
+    }
+    .btn {
+      margin: 0 auto;
+      max-width: 180px;
+      @media @tablet-widths {
+        max-width: 272px;
+      }
+      @media @desktop-widths {
+        max-width: 272px;
+      }
     }
   }
 }
@@ -66,24 +85,8 @@
   @media @desktop-widths {
     padding: 47px 20px 40px;
   }
-  .btn {
-    @media @tablet-widths {
-      margin: 0 auto;
-      max-width: 456px;
-    }
-    @media @desktop-widths {
-      max-width: 458px;
-    }
-  }
   .popup--error & {
     padding: 0 20px 35px;
     background: none;
-    .btn {
-      margin: 0 auto;
-      max-width: 180px;
-      @media @tablet-widths {
-        max-width: 272px;
-      }
-    }
   }
 }
